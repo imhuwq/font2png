@@ -1,0 +1,6 @@
+.idea
+*.pyc
+data
+build
+dev.py
+.python-version
