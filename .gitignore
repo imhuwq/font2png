@@ -1,6 +1,8 @@
 .idea
 *.pyc
 data
+dist
 build
 dev.py
 .python-version
+font2png.egg-info

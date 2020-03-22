@@ -228,10 +228,12 @@ target_link_libraries(fontforge
     LibXml2::LibXml2
     GLIB::GLIB
     Intl::Intl
+    Python3::Python
   PRIVATE
     MathLib::MathLib
     Iconv::Iconv
     ZLIB::ZLIB
+    WOFF2::WOFF2
 )
 
 if(APPLE)
@@ -240,9 +242,6 @@ if(APPLE)
     "-framework CoreServices"
   )
 endif()
-
-target_link_libraries(fontforge PUBLIC Python3::Python)
-target_link_libraries(fontforge PRIVATE WOFF2::WOFF2)
 
 if(${CMAKE_VERSION} VERSION_LESS "3.12.0")
   target_link_libraries(fontforge PRIVATE gunicode_interface gutils_interface)
